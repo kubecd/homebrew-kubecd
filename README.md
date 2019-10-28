@@ -1,2 +1,2 @@
-# homebrew-kubecd
+# homebrew-tap
 Brew tap for kubecd
