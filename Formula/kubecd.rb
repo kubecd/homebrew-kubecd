@@ -2,28 +2,27 @@
 class Kubecd < Formula
   desc "Kubernetes GitOps deployment tool"
   homepage "https://github.com/zedge/kubecd/"
-  version "0.51.1"
+  version "0.52.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/zedge/kubecd/releases/download/v0.51.1/kubecd_0.51.1_darwin_amd64.tar.gz"
-    sha256 "d5e1762058deb1486f526d7b06e6c172ad49426c0937b540bb6fedfdea150797"
+    url "https://github.com/zedge/kubecd/releases/download/v0.52.0/kubecd_0.52.0_darwin_amd64.tar.gz"
+    sha256 "075278596ca51f6e435545d31cc1525458430598148fb50147d99f909d9632db"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/zedge/kubecd/releases/download/v0.51.1/kubecd_0.51.1_linux_amd64.tar.gz"
-      sha256 "5d087952d5176a56744eb090e4f8e9457534002cee33ae8bf6ac1cf984a20ff5"
+      url "https://github.com/zedge/kubecd/releases/download/v0.52.0/kubecd_0.52.0_linux_amd64.tar.gz"
+      sha256 "01c6790f91c1be40058c53618cba202e699f745f2ed7837dc63433a640892532"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/zedge/kubecd/releases/download/v0.51.1/kubecd_0.51.1_linux_arm64.tar.gz"
-        sha256 "68894b5105e7e668d11d20b6b2a8624a8c14d0395af8ff37cb47fe811ed767de"
+        url "https://github.com/zedge/kubecd/releases/download/v0.52.0/kubecd_0.52.0_linux_arm64.tar.gz"
+        sha256 "93f16afc719befd966d75459183440eb86037dc1aaadea3081da6a4ea7c0c688"
       else
       end
     end
   end
   
   depends_on "kubernetes-cli"
-  depends_on "kubernetes-helm"
 
   def install
     bin.install "kcd"
