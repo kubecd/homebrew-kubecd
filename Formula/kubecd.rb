@@ -2,20 +2,20 @@
 class Kubecd < Formula
   desc "Kubernetes GitOps deployment tool"
   homepage "https://github.com/kubecd/kubecd/"
-  version "1.0.0-rc.1"
+  version "1.0.0-rc.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.1/kubecd_1.0.0-rc.1_darwin_amd64.tar.gz"
-    sha256 "fe08d65d6b317448b7f5be8f277b38c71818969bd004ff1225304bd850fc7b3e"
+    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.2/kubecd_1.0.0-rc.2_darwin_amd64.tar.gz"
+    sha256 "58eb7996e69cd3c9828ae7c48b52124bcb614d9cd4648c826879ebf6d7068eb7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.1/kubecd_1.0.0-rc.1_linux_amd64.tar.gz"
-    sha256 "f5dacf44f645ed30cfea92cec5f337ee40c0a45692c39af80b3830aace6a0ccb"
+    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.2/kubecd_1.0.0-rc.2_linux_amd64.tar.gz"
+    sha256 "9583af95f0e913b5f878e71dd03c9f0e9cd49734b21fe7603727a78fdbadb3be"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.1/kubecd_1.0.0-rc.1_linux_arm64.tar.gz"
-    sha256 "d099ad7a792e853a7aec2b2007d8645d167c8ef2b7471329c88cc03d0ec2b4e2"
+    url "https://github.com/kubecd/kubecd/releases/download/v1.0.0-rc.2/kubecd_1.0.0-rc.2_linux_arm64.tar.gz"
+    sha256 "af7e8d6654d5087d5a415721db7e9836a8a73a945c23624ab3de4bdb2731992f"
   end
   
   depends_on "kubernetes-cli"
